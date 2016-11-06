@@ -1,0 +1,80 @@
+
+# Version 0.90 - Sunday 6th November 2016
+(the "about time I looked at this again" version)
+
+It has been a long time since the last update, which incorporated some improvements. Since the 0.85 update, I constructed and published to other games (HQWA and BMPS). The 0.90 update does not work with the save files from the previous versions, this is because large sections of code that was developed for HQWA and BMPS was refactored back into XLEA.
+
+Restoring a save file now, restoring the previous dialog (as much as the buffer holds). This is a feature that HQWA expanded upon.
+
+There are minor CURSES interface fixes, that were found during the development of HQWA.
+
+The Dialog Search/Replace functions, that were originally developed for BMPS, were put into XLEA. The dialog has been updated to reference the (rather limited) search/replace table. One of the things that I discovered when constructing XLEA is that it is difficult to be consistent when you have a PC character name that can be easily mistyped, and not noticed. However, the primary reason that the search/replace code was copied over, was to all for CGI-BIN version of the program to be constructed (CGI-BIN conversions exist of HQWA and BMPS as well).
+
+There was a considerable review of the dialog. Numerous grammatical and spelling errors were found and resolved. I am not 100% confident that I have found all of the problems in the dialog, but looking at the numerous pages of text with some new editor tools certainly helped track down many issues that I did not notice before.
+
+To make XLEA consistent with the more recent HQWA and BMPS releases, a help PDF file has been added.
+
+
+# Version 0.85 - Sunday 24th July 2016
+(feedback from 4chan /dgg/)
+
+Found a bug with displaying the wrong autocomplete when characters were deleted. Changed the code to re-evaluate the display of autocomplete for every delete and/or backspace.
+
+Direct input Backspace functions the same as delete when at position 0. Direct input Delete functions the same as backspace when at the end of the string. Added the windows binding for Backspace incase other Linux NCURSES does not use the NCURSES definition. Did the same for Enter (no one has complained, but just in case).
+
+To further solve the possible confusion between Direct input and Scroll/select modes, added a binding for Backspace and Delete (one and the same) to Scroll/select processing that copies the displayed string into the work buffer and switches to Direct input when used. This might be seen as a better shortcut out of Scroll/select than the "Page Up" and "Page down" combination, as Delete and Backspace keys are positioned around the same area of the keyboard than tab (for single handed users).
+
+
+# Version 0.84 - Friday 15th July 2016
+(merge interface updates from next project)
+
+Found and fixed a logic error with screen resizing and the input mode.
+
+Added scroll back history. The program maintains a pair of 64Kilobyte buffers of historical dialog and displays it as dimmed text. This includes changes to the scrolled back history being shown after the player choses an option, but the following text not being long enough to fill the screen.
+
+Updated the key bindings for more text, direct input and scroll/select modes.
+
+Down arrow key shifts out of direct input into scroll/select (the same as pressing Tab). Page Up works from scroll/select. Home key moves to the top of the dialog. End moves to the bottom (allowing the player to skip over reading the text, without resorting to pressing page down mulitple times).
+
+
+# Version 0.83 - Sunday 26th June 2016 & Monday 27th June 2016
+(feedback from 4chan /dgg/)
+
+Fixed up a total of 63 dyslexic misspellings of the titular characters name (of the 1,275 odd times it appears).
+
+De-capitalized all of the colors.
+
+Added detail about starting a new game to the help page.
+
+Fixed a grammatical error or two.
+
+Fixed a logic mistake in the lead up to ending 6, where I wasn't correctly branching to ending 1 if the table wasn't there.
+Note: I rechecked all of the conditional exits for all of the other endings, this was the ONLY one that was missed.
+
+
+# Version 0.82 - Saturday 25th June 2016.
+(feedback from /d/evs)
+
+Added the -t command line switch so that the program defaults to tab entry mode.
+
+Added the DEVELOPMENT file.
+
+
+# Version 0.81 - Monday 20th June 2016.
+(feedback from /d/evs)
+
+Reassessed the single line scrolling logic to use curses scroll functions instead of redrawing the entire screen (which caused it to flash). Instead of redrawing the entire screen to scroll it one line, only 2 lines are redrawn (this is because of the floating <more> tag that is maintained in the bottom right corner).
+
+Grammar review and fixes for all 12 sex scenes (which were added last and were not as thoroughly reviewed).
+
+Added README file and this CHANGELOG file.
+
+
+# Version 0.80 - Saturday 18th June 2016.
+
+Initial alpha version released.
+
+
+# Project start - Monday 25th April 2016.
+
+

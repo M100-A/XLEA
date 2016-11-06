@@ -1,0 +1,72 @@
+25th June 2016
+
+Xyla's Little Elven Adventure (XLEA) was started as a project on 25th April 2016.
+
+The first aim of the project was to produce a /d/-themed game within 2 months. Given it is now 25th June 2016, that aim was achieved. The second aim was to actually finish and publish a game, which was achieved just under a week ago. Third aim was to get experience with writing an interactive sex scene.
+
+However, while this game that was produced, it has a number of issues.
+
+For a start, it is very heavy on text and description. It is more of an interactive novel than a game. I created a huge task for myself as I haven't written erotic fiction before. Writing erotic fiction where you are altering part of the text, therefore the outcomes, while maintaining continuity, is rather difficult.
+
+Also, the atomic sex actions (interactive sex), the only thing that sets this apart from a kinetic-novel, are very grindy. A request was put in for tab selection mode to be the default. That was added via a command line switch. As a result, this is the first and probably the last time that I will make sex interaction like this. It was worth a try.
+
+The save file structure was based upon saving the flag conditions before scene function execution, which in hindsight isn't the best. There are pros and cons to the method I have selected. This won't work for the next game.
+
+The basic "unable to scroll back" text display sort of works for long text that this game has, but will not work for another game with short text descriptions. It didn't work for the interactive text, so this is an area that will be improved for the next project.
+
+
+Some people are probably wondering why this was produced as a C program using the CURSES API and not as a Flash or Javascript game. That is more to do with the fact that I am more familiar with how to make a C program and it's limitations than I am with Flash (which is disappearing) and Javascript (which is starting to feel the same security and operational issues as Flash did).
+
+I know that this is not going to help the people who might want to play this on iOS or Android, however I already accepted that I could not satisfy everyone. I did think of how I could get this game content to those platforms, but that can wait till another day.
+
+I am going to continue creating CURSES based games.
+
+The CURSES interface that I used was created for another game and was developed for an entire 2 days prior to starting the actual XLEA project. For me, this project was useful as it has demonstrated what alterations I need to make to the interface for the next game.
+
+
+Why orcs and elves?.. why not!. In some ways focusing on that lead to some of the other fetishes that appear on /d/, including small-penis humiliation, reverse rape and femdom.
+
+
+Development started with 2 weeks of full time script writing. In those 2 weeks I created the backstory, the structure of the encounters and identified that I had nine endings. The only dialog that wasn't completed within that time was the elements for the atomic sex scenes. However, the dialog that I had produced had a lot of flow problems as well as grammatical errors. The grammatical errors happen because I know what thinking when I am writing and end up skipping things and/or mangling the sentences. It isn't till weeks later when I go back and QC the dialog do I manage to find the mistakes. There are probably mistakes still in there.
+
+Then 2 weeks of part time coding.
+
+Then a number of days of QCing the dialog and logic.
+
+It took about 2 weeks part time to write the atomic sex action elements.
+
+Then a final couple of days QCing the sex dialog.
+
+
+One of my regrets/issues is that I could not find anyone who was willing to act as an editor for the entire game concept, from start (scripts) to finish (final production), without making it look like I was hyping vaporware.
+
+When you haven't published anything before, no one believes you when you say you are going to get something out. You just get shot down as being another project that isn't going to ever succeed. I never posted for help on 4chan /d/-/dgg/ (/d/ games general). If I did, all that I would have received is abuse from the shitposters.
+
+If anyone, wants to use the game structure that I have created for another game (of your own)... go for it. I am not going to get in your way. If anyone wants to improve XLEA itself... be my guest.
+
+If you want to ask me questions, then you will need to hang out on the Rizon /d/evs IRC channel. However, I am not logged in there all of the time.
+
+
+M100
+25th June 2016
+
+------------
+
+6th November 2016 Addendum (v0.90)
+
+Some of the issues and misgivings that I had when I originally created XLEA have now been fixed. This is primarily because I created and published another 2 games. I was about to start on another, when I decided to put some effort into fixing up my earlier creations, which meant I went back to improve HQWA (the game I published after XLEA), and XLEA itself.
+
+The save file structure has been "improved", and changed from saving pre-state, to saving post-state. It also means that the dialog archive buffer is restored from the save file. Both HQWA and BMPS were already working that way, and had proven that it works.
+
+Improvements have been made to the input interface (but it still has some issues). Playing the CURSES versions of XLEA, HQWA and BMPS "single handed" is still problematic. However, to resolve that, means breaking the input so it is no longer possible to just type commands. There is no easy solution to this (but it gets easier when the 3 games are in their CGI-BIN code forms, and accessed via a web browser).
+
+I have changed my coding/editing process, which helps me track down spelling errors faster. I have incorporated search/replace tags in the output dialog construction stream, which make it easier to keep the dialog consistent.
+
+While considering additional interface changes for the next game, I took a look at the potential of restructuring the interface so it was a proper "interactive fiction" input (with shortcut links). However, while such an interface is likely to appeal to "diehard IF fans", it is ignoring the casual players who want to play one handed. What a turnoff it would be, to have to use both hands to type, when you really want to use one to control the game, and the other to.. do "something else"..
+
+Therefore, I am planning on sticking to this interface format. Now that I have the conversion framework to create a game that works either as a command line or in a web browser, I think I will keep using it.
+
+
+M100
+6th November 2016
+
